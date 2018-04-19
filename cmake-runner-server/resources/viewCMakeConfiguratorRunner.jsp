@@ -46,6 +46,11 @@
   <strong><props:displayValue name="${bean.generatorPlatformKey}" emptyValue="Default"/></strong>
 </div>
 
+<div class="parameter">
+  Generator Toolset:
+  <strong><props:displayValue name="${bean.generatorToolsetKey}" emptyValue="Default"/></strong>
+</div>
+
 
 <div class="parameter">
   Build type:

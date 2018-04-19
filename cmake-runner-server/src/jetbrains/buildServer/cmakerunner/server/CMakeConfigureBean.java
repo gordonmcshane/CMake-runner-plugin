@@ -20,6 +20,7 @@ package jetbrains.buildServer.cmakerunner.server;
 import jetbrains.buildServer.cmakerunner.CMakeBuildType;
 import jetbrains.buildServer.cmakerunner.CMakeGenerator;
 import jetbrains.buildServer.cmakerunner.CMakeGeneratorPlatform;
+import jetbrains.buildServer.cmakerunner.CMakeGeneratorToolset;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -52,6 +53,9 @@ public class CMakeConfigureBean {
 
   @NotNull
   public String getGeneratorPlatformKey() { return UI_GENERATOR_PLATFORM; }
+
+  @NotNull
+  public String getGeneratorToolsetKey() { return UI_GENERATOR_TOOLSET; }
 
   @NotNull
   public String getBuildTypeKey() {
@@ -121,6 +125,15 @@ public class CMakeConfigureBean {
   public ArrayList<String> getGeneratorPlatformNames() {
     final ArrayList<String> ret = new ArrayList<String>();
     for (final String s : CMakeGeneratorPlatform.KNOWN_GENERATOR_PLATFORMS) {
+      ret.add("\"" + s + '\"');
+    }
+    return ret;
+  }
+
+  @NotNull
+  public ArrayList<String> getGeneratorToolsetNames() {
+    final ArrayList<String> ret = new ArrayList<String>();
+    for (final String s : CMakeGeneratorToolset.KNOWN_GENERATOR_TOOLSETS) {
       ret.add("\"" + s + '\"');
     }
     return ret;

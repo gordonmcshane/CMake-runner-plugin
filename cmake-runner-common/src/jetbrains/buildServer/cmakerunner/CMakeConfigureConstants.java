@@ -52,6 +52,9 @@ public interface CMakeConfigureConstants {
   String UI_GENERATOR_PLATFORM = UI_PREFIX + "generator-platform";
   @NotNull
   @NonNls
+  String UI_GENERATOR_TOOLSET = UI_PREFIX + "generator-toolset";
+  @NotNull
+  @NonNls
   String UI_DEVELOPER_WARNINGS = UI_PREFIX + "developer-warnings";
 
   @NotNull
@@ -94,6 +97,10 @@ public interface CMakeConfigureConstants {
   @NotNull
   @NonNls
   String RUNNER_GENERATOR_PLATFORM = "-A";
+
+  @NotNull
+  @NonNls
+  String RUNNER_GENERATOR_TOOLSET = "-T";
 
   @NotNull
   @NonNls

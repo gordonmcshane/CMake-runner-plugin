@@ -79,6 +79,21 @@
   </td>
 </tr>
 
+<tr class="advancedSetting">
+  <th><label for="${bean.generatorToolsetKey}">Generator Toolset: </label></th>
+  <td id="generator-toolset">
+    <c:set var="generatorToolsetValue"><c:out value="${propertiesBean.properties[bean.generatorToolsetKey]}"/></c:set>
+    <input type="text" id="${bean.generatorToolsetKey}" name="prop:${bean.generatorToolsetKey}" value="${generatorToolsetValue}"/>
+    <span class="smallNote" id="${bean.generatorToolsetNames}.description">You can choose toolset from list or enter some other value. Use 'Default' or leave blank for using generator default toolset.</span>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery("#${bean.generatorToolsetKey}").autocomplete({source: ${bean.generatorToolsetNames}});
+            jQuery("#${bean.generatorToolsetKey}").placeholder();
+        });
+    </script>
+  </td>
+
+
 <tr>
   <th><label for="${bean.buildTypeKey}">Build type: </label></th>
   <td id="buildType">

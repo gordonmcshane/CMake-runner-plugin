@@ -93,7 +93,7 @@ public class CMakeConfigureRunType extends RunType {
 
     ret.put(CMakeConfigureConstants.UI_MAKEFILE_GENERATOR, "Default");
     ret.put(CMakeConfigureConstants.UI_GENERATOR_PLATFORM, "Default");
-
+    ret.put(CMakeConfigureConstants.UI_GENERATOR_TOOLSET, "Default");
     return ret;
   }
 }
