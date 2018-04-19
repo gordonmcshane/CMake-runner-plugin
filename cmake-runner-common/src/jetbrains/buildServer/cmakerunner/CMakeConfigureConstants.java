@@ -49,6 +49,9 @@ public interface CMakeConfigureConstants {
   String UI_MAKEFILE_GENERATOR = UI_PREFIX + "makefile-generator";
   @NotNull
   @NonNls
+  String UI_GENERATOR_PLATFORM = UI_PREFIX + "generator-platform";
+  @NotNull
+  @NonNls
   String UI_DEVELOPER_WARNINGS = UI_PREFIX + "developer-warnings";
 
   @NotNull
@@ -87,6 +90,11 @@ public interface CMakeConfigureConstants {
   @NotNull
   @NonNls
   String RUNNER_MAKEFILE_GENERATOR = "-G";
+
+  @NotNull
+  @NonNls
+  String RUNNER_GENERATOR_PLATFORM = "-A";
+
   @NotNull
   @NonNls
   String RUNNER_DEVELOPER_WARNINGS_ON = "-Wdev";

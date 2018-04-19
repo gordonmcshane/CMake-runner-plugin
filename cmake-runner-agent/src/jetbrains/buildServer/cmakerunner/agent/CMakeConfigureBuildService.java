@@ -66,6 +66,12 @@ public class CMakeConfigureBuildService extends ExtendedBuildServiceAdapter {
       arguments.add(generator);
     }
 
+    final String generatorPlatform = runnerParameters.get(UI_GENERATOR_PLATFORM);
+    if (generatorPlatform != null && !generatorPlatform.equalsIgnoreCase("Default")) {
+      arguments.add(RUNNER_GENERATOR_PLATFORM);
+      arguments.add(generatorPlatform);
+    }
+
     final Boolean devWarn = Boolean.valueOf(runnerParameters.get(UI_DEVELOPER_WARNINGS));
     arguments.add(devWarn ? RUNNER_DEVELOPER_WARNINGS_ON : RUNNER_DEVELOPER_WARNINGS_OFF);
 

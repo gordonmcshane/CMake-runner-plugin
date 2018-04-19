@@ -64,6 +64,21 @@
   </td>
 </tr>
 
+<tr class="advancedSetting">
+  <th><label for="${bean.generatorPlatformKey}">Generator Platform: </label></th>
+  <td id="generator-platform">
+    <c:set var="generatorPlatformValue"><c:out value="${propertiesBean.properties[bean.generatorPlatformKey]}"/></c:set>
+    <input type="text" id="${bean.generatorPlatformKey}" name="prop:${bean.generatorPlatformKey}" value="${generatorPlatformValue}"/>
+    <span class="smallNote" id="${bean.generatorPlatformNames}.description">You can choose platform from list or enter some other value. Use 'Default' or leave blank for using system default generator platform.</span>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery("#${bean.generatorPlatformKey}").autocomplete({source: ${bean.generatorPlatformNames}});
+            jQuery("#${bean.generatorPlatformKey}").placeholder();
+        });
+    </script>
+  </td>
+</tr>
+
 <tr>
   <th><label for="${bean.buildTypeKey}">Build type: </label></th>
   <td id="buildType">

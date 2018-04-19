@@ -42,6 +42,12 @@
 </div>
 
 <div class="parameter">
+  Generator Platform:
+  <strong><props:displayValue name="${bean.generatorPlatformKey}" emptyValue="Default"/></strong>
+</div>
+
+
+<div class="parameter">
   Build type:
   <strong><props:displayValue name="${bean.buildTypeKey}" emptyValue="DEFAULT"/></strong>
 </div>
