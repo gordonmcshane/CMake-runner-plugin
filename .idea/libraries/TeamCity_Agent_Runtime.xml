@@ -5,6 +5,8 @@
       <root url="file://$TeamCityDistribution$/buildAgent/launcher/lib" />
       <root url="jar://$TeamCityDistribution$/webapps/ROOT/WEB-INF/plugins/commandLineRunner/agent/commandLineRunner.jar!/commandLineRunner/commandLineRunner.jar!/" />
       <root url="jar://$TeamCityDistribution$/buildAgent/plugins/commandLineRunner/commandLineRunner.jar!/" />
+      <root url="jar://$TeamCityDistribution$/webapps/ROOT/WEB-INF/plugins/commandLineRunner/agent/commandLineRunner.jar!/" />
+      <root url="jar://$TeamCityDistribution$/webapps/ROOT/WEB-INF/plugins/commandLineRunner/server/commandLineRunner.jar!/" />
     </CLASSES>
     <JAVADOC />
     <NATIVE>
