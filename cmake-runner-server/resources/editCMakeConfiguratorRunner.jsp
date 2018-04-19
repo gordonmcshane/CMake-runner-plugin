@@ -32,7 +32,7 @@
 <forms:workingDirectory/>
 
 <tr>
-  <th><label for="${bean.sourcePathKey}">Path to source (CMakeList.txt): </label></th>
+  <th><label for="${bean.sourcePathKey}">Path to source (CMakeLists.txt): </label></th>
   <td>
     <props:textProperty name="${bean.sourcePathKey}" className="longField" maxlength="256"/>
     <span class="smallNote">Enter path to source relative to working directory or leave blank for use '.' .</span>
